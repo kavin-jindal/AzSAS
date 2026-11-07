@@ -1,0 +1,13 @@
+{
+  "keys": [
+    {
+      "name": "default",
+      "value": "CfDJ8AAAAAAAAAAAAAAAAAAAAACySloWXZj5BQqDaJAciFzbvl05A5_XcJEysETsnWFCWkssLhWrbMrAkODRp0us2hJz9zZ4Ncpl5f_GcexVKZol7B0ttqzLcv4SEOHYCn8teBEoOLGm5ADlbFI6SBFCytDKgWo3Ko8EhXFbw7ypysRPXrfCMamaKnPYu1twW6Gh0g",
+      "encrypted": true
+    }
+  ],
+  "hostName": "rosarray.azurewebsites.net",
+  "instanceId": "0000000000000000000000000403D027",
+  "source": "runtime",
+  "decryptionKeyId": "AzureWebEncryptionKey=71K9CPtGDRphMirq9D21FkBghc3YmeQlIbrYA93zK1c=;"
+}
