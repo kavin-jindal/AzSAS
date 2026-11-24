@@ -53,10 +53,16 @@ def blob_enum(account, sas, container):
     sas_token = f.read()
     service_client = BlobServiceClient(account_url=f"https://{account}.blob.core.windows.net", credential=sas_token)
     container_client = service_client.get_container_client(container=container)
-    files = container_client.list_blobs()
+    files = container_client.list_blobs(include=['versions'])
     print("Container: ", container)
     for i in files:
-        print('\t[!] ', i.name)
+        if i.version_id is None:
+            status = "UNVERSIONED"
+        elif i.is_current_version:
+            status = "CURRENT"
+        else:
+            status = "PREVIOUS"
+        print(f'\t[!] [{status}] ', i.name, i.version_id, )
 
     
 def download_blob(account, sas, container, output):
