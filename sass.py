@@ -105,7 +105,7 @@ def download_blob(account, sas, container, output):
         print(f"  {DIM}No files to download.{RESET}\n")
         return
 
-    output_dir = Path(output)
+    output_dir = Path(output) / container
     for i in files_list:
         download_kwargs = {"version_id": i.version_id} if i.version_id else {}
         blob_data = container_client.download_blob(blob=i.name, **download_kwargs)
